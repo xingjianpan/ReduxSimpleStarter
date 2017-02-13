@@ -5,10 +5,7 @@ import App from '../../src/components/app';
 // use 'descibe' to group simliar tests
 describe('App' , () => {
   let component;
-
-
   component = renderComponent(App);
-
 
   // use 'it' to test a single attribute of a target
   it('renders something', () => {
@@ -16,9 +13,10 @@ describe('App' , () => {
     expect(component).to.exist;
   });
 
-  it('shows the correct text', ()=>{
-    expect(component).to.contain('React simple starter');
+  it('shows a comment box', ()=>{
+    expect(component.find('.comment-box')).to.exist
   })
+
 });
 
 
